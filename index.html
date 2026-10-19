@@ -3,345 +3,799 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>МБОУ "Майртупская СШ №2 им АА Кадырова"</title>
+<title>МБОУ «Майртупская СШ №2 им. А. А. Кадырова»</title>
 <style>
 :root {
-  --primary: #2c52ba; /* школьный синий */
-  --accent: #fbbf24; /* жёлтый акцент */
-  --dark: #1f2937;
-  --light: #f9fafb;
-  --text: #334155;
-  --vk: #0077ff;
-  --tg: #229ed9;
+--primary: #2c52ba; /* школьный синий */
+--accent: #fbbf24; /* жёлтый акцент */
+--dark: #1f2937;
+--light: #f9fafb;
+--text: #334155;
+--vk: #0077ff;
+--danger: #b91c1c;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--light);
-  color: var(--text);
-  line-height: 1.6;
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+background: var(--light);
+color: var(--text);
+line-height: 1.6;
 }
 header {
-  background: #fff;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
+background: #fff;
+padding: 1rem 1.5rem;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+position: sticky;
+top: 0;
+z-index: 100;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 15px;
 }
 .school-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary);
+display: flex;
+align-items: center;
+gap: 12px;
+font-weight: 700;
+font-size: 1.15rem;
+color: var(--primary);
+user-select: none;
 }
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+.menu-toggle {
+display: none;
+background: none;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+padding: 0.4rem 0.8rem;
+font-size: 1rem;
+cursor: pointer;
+color: var(--dark);
 }
+nav ul { display: flex; list-style: none; gap: 20px; }
 nav a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  transition: color 0.2s;
+text-decoration: none;
+color: var(--dark);
+font-weight: 500;
+transition: color 0.2s;
 }
 nav a:hover { color: var(--primary); }
 main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
 .hero {
-  background: white;
-  padding: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  margin-bottom: 2.5rem;
-  text-align: center;
+background: white;
+padding: 3rem;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+margin-bottom: 2.5rem;
+text-align: center;
 }
 .hero h1 { color: var(--primary); margin-bottom: 0.75rem; }
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 1.5rem;
+margin-bottom: 2.5rem;
 }
 .feature-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  border-top: 4px solid var(--accent);
+background: white;
+padding: 1.5rem;
+border-radius: 12px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+border-top: 4px solid var(--accent);
 }
-.feature-card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--dark);
-}
+.feature-card h3 { margin-bottom: 0.5rem; color: var(--dark); }
 section {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 16px;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+background: white;
+padding: 2.5rem;
+border-radius: 16px;
+margin-bottom: 2.5rem;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 h2 { color: var(--primary); margin-bottom: 1.25rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+h3.sub { color: var(--dark); margin-bottom: 0.75rem; font-size: 1.15rem; }
+section p { margin-bottom: 0.9rem; }
 ul { margin-top: 0.75rem; list-style: disc; padding-left: 1.25rem; }
 li { margin-bottom: 0.4rem; }
 
 /* Кнопки */
 .cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.4rem;
-  background: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s, transform 0.1s;
+display: inline-block;
+margin-top: 1rem;
+padding: 0.8rem 1.4rem;
+background: var(--primary);
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-weight: 500;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+font-family: inherit;
+transition: background 0.2s, transform 0.1s;
 }
 .cta:hover { background: #1e3a8a; }
 .cta:active { transform: scale(0.98); }
+.cta.secondary { background: #e5e7eb; color: var(--dark); }
+.cta.secondary:hover { background: #d1d5db; }
+.cta.danger { background: var(--danger); }
+.cta.danger:hover { background: #7f1d1d; }
+.cta.small { padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+outline: 3px solid var(--accent);
+outline-offset: 2px;
+}
+
+/* Новости */
+.news-list { display: grid; gap: 1.25rem; }
+.news-card {
+border: 1px solid #e5e7eb;
+border-left: 4px solid var(--primary);
+border-radius: 12px;
+padding: 1.25rem 1.5rem;
+background: #fff;
+}
+.news-card h3 { color: var(--dark); margin-bottom: 0.25rem; }
+.news-date { font-size: 0.85rem; color: #64748b; margin-bottom: 0.6rem; }
+.news-card img {
+max-width: 100%;
+border-radius: 8px;
+margin: 0.5rem 0 0.75rem;
+display: block;
+}
+.news-card p { margin-bottom: 0.6rem; }
+.news-empty { color: #64748b; }
+.news-more { text-align: center; }
 
 /* Сетка для контактов */
-.contacts-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
+.contacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .contacts-list p { margin-bottom: 0.8rem; }
 .contacts-list a { color: var(--primary); text-decoration: none; }
 .contacts-list a:hover { text-decoration: underline; }
 
 /* Соцсети */
-.social-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 1.5rem;
-}
+.social-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5rem; }
 .btn-social {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: opacity 0.2s;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 0.6rem 1.2rem;
+border-radius: 8px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+font-size: 0.9rem;
+transition: opacity 0.2s;
 }
 .btn-social:hover { opacity: 0.9; }
 .btn-vk { background: var(--vk); }
-.btn-tg { background: var(--tg); }
 
 /* Карта */
 .map-container {
-  margin-top: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-  height: 250px;
+border-radius: 12px;
+overflow: hidden;
+border: 1px solid #e5e7eb;
+height: 250px;
 }
+.map-container iframe { width: 100%; height: 100%; border: 0; }
+.map-link { display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--primary); }
 
 /* Форма обратной связи */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 1.5rem;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.form-group label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--dark);
-}
+.contact-form { display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-size: 0.9rem; font-weight: 500; color: var(--dark); }
 .form-group input, .form-group textarea {
-  padding: 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s;
+padding: 0.75rem;
+border: 1px solid #cbd5e1;
+border-radius: 8px;
+font-family: inherit;
+font-size: 1rem;
+transition: border-color 0.2s;
 }
 .form-group input:focus, .form-group textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(44, 82, 186, 0.1);
+border-color: var(--primary);
+box-shadow: 0 0 0 3px rgba(44, 82, 186, 0.1);
 }
 .success-message {
-  display: none;
-  background: #dcfce7;
-  color: #15803d;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-  font-weight: 500;
-  text-align: center;
+display: none;
+background: #dcfce7;
+color: #15803d;
+padding: 1rem;
+border-radius: 8px;
+margin-top: 1rem;
+font-weight: 500;
+text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding: 3rem 1rem;
-  color: #64748b;
-  font-size: 0.9rem;
+footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9rem; }
+
+/* Скрытая админ-панель */
+.admin-overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(15, 23, 42, 0.6);
+z-index: 1000;
+overflow-y: auto;
+padding: 1.5rem 1rem;
 }
+.admin-overlay.open { display: block; }
+.admin-box {
+background: #fff;
+max-width: 760px;
+margin: 0 auto;
+border-radius: 16px;
+padding: 1.75rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.admin-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 10px; }
+.admin-head h2 { margin: 0; border: none; padding: 0; }
+.admin-box .form-group { margin-bottom: 0.75rem; }
+.admin-note {
+background: #fef9c3;
+border: 1px solid #fde68a;
+color: #713f12;
+padding: 0.75rem 1rem;
+border-radius: 8px;
+font-size: 0.88rem;
+margin: 1rem 0;
+}
+.admin-error { color: var(--danger); font-size: 0.9rem; margin-top: 0.5rem; min-height: 1.2em; }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
+.admin-post {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+border: 1px solid #e5e7eb;
+border-radius: 8px;
+padding: 0.6rem 0.9rem;
+margin-bottom: 0.5rem;
+}
+.admin-post span { overflow: hidden; text-overflow: ellipsis; }
+.admin-post small { color: #64748b; display: block; }
+.admin-post .admin-actions { margin: 0; flex-shrink: 0; }
+.admin-box h3 { margin: 1.25rem 0 0.6rem; color: var(--dark); }
 
 @media (max-width: 768px) {
-  header { flex-direction: column; text-align: center; padding: 1rem; }
-  nav ul { flex-direction: column; gap: 12px; align-items: center; }
-  .hero { padding: 2rem 1rem; }
-  section { padding: 1.5rem; }
-  .contacts-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+header { padding: 0.8rem 1rem; }
+.school-logo { font-size: 1rem; }
+.menu-toggle { display: inline-block; }
+nav { width: 100%; display: none; }
+nav.open { display: block; }
+nav ul { flex-direction: column; gap: 12px; padding: 0.5rem 0; }
+.hero { padding: 2rem 1rem; }
+section { padding: 1.5rem; }
+.contacts-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+.admin-box { padding: 1.25rem; }
+.admin-post { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
+* { transition: none !important; }
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="school-logo">
-    <span>🏫 МБОУ "Майртупская СШ №2 им АА Кадырова"</span>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#home">Главная</a></li>
-      <li><a href="#about">О школе</a></li>
-      <li><a href="#grades">Классы и предметы</a></li>
-      <li><a href="#events">Мероприятия</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </nav>
+<div class="school-logo" id="logo">
+<span>🏫 МБОУ «Майртупская СШ №2 им. А. А. Кадырова»</span>
+</div>
+<button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">☰ Меню</button>
+<nav id="mainNav">
+<ul>
+<li><a href="#home">Главная</a></li>
+<li><a href="#about">О школе</a></li>
+<li><a href="#grades">Классы и предметы</a></li>
+<li><a href="#news">Посты и новости</a></li>
+<li><a href="#events">Мероприятия</a></li>
+<li><a href="#contacts">Контакты</a></li>
+</ul>
+</nav>
 </header>
 
 <main>
-  <section id="home" class="hero">
-    <h1>Добро пожаловать в нашу школу!</h1>
-    <p>Мы создаём среду, где каждый ученик раскрывает свой потенциал и уверенно смотрит в будущее.</p>
-    <a href="#feedback" class="cta">Написать нам</a>
-  </section>
+<section id="home" class="hero">
+<h1>Добро пожаловать в нашу школу!</h1>
+<p>Мы создаём среду, где каждый ученик раскрывает свой потенциал и уверенно смотрит в будущее.</p>
+<a href="#feedback" class="cta">Написать нам</a>
+</section>
 
-  <div class="features">
-    <div class="feature-card">
-      <h3>Сильные учителя</h3>
-      <p>Опытные педагоги, которые умеют объяснять сложное простыми словами.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Современная техника</h3>
-      <p>Компьютерный класс, интерактивные доски, лаборатории для экспериментов.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Внеурочная жизнь</h3>
-      <p>Кружки, секции, олимпиады и творческие проекты для всех желающих.</p>
-    </div>
-  </div>
+<div class="features">
+<div class="feature-card">
+<h3>Сильные учителя</h3>
+<p>Опытные педагоги, которые умеют объяснять сложное простыми словами.</p>
+</div>
+<div class="feature-card">
+<h3>Современная техника</h3>
+<p>Компьютерный класс, интерактивные доски, лаборатории для экспериментов.</p>
+</div>
+<div class="feature-card">
+<h3>Внеурочная жизнь</h3>
+<p>Кружки, секции, олимпиады и творческие проекты для всех желающих.</p>
+</div>
+</div>
 
-  <section id="about">
-    <h2>О школе</h2>
-    <p>МБОУ «Майртупская школа № 2 им. А. А. Кадырова» — Храм науки и Дом счастливого детства
+<section id="about">
+<h2>О школе</h2>
+<h3 class="sub">Храм науки и Дом счастливого детства</h3>
+<p>МБОУ «Майртупская школа № 2 имени А. А. Кадырова» — это не просто образовательное учреждение, это надёжный фундамент для будущего сотен детей и центр культурной жизни села. Наша школа гордится своей богатой историей и крепкими традициями, которые бережно передаются из поколения в поколение.</p>
+<p>За годы работы школа стала кузницей настоящих профессионалов. Мы с гордостью можем сказать, что наши выпускники востребованы в самых разных сферах: среди них врачи и учителя, инженеры и деятели культуры, защитники Отечества и успешные руководители. Их достижения — это главная награда для педагогического коллектива и доказательство высокого качества образования, которое даёт наша школа.</p>
+<p>Но прежде всего наша школа — это Дом счастливого детства. Здесь каждый ученик окружён заботой, вниманием и теплом. Мы создаём условия не только для получения глубоких знаний, но и для гармоничного развития личности, раскрытия талантов и воспитания истинных патриотов своей Родины.</p>
+</section>
 
-МБОУ «Майртупская школа № 2 имени А. А. Кадырова» — это не просто образовательное учреждение, это надежный фундамент для будущего сотен детей и центр культурной жизни села. Наша школа гордится своей богатой историей и крепкими традициями, которые бережно передаются из поколения в поколение.
+<section id="grades">
+<h2>Классы и предметы</h2>
+<p>У нас учатся с 1 по 11 класс. Основные направления:</p>
+<ul>
+<li>Естественно-научное (биология, химия, физика)</li>
+<li>Гуманитарное (история, обществознание, литература)</li>
+<li>Математическое (алгебра, геометрия, информатика)</li>
+<li>Кружки: БАС, математический, литературный, шахматы, футбол, волейбол, баскетбол, лёгкая атлетика</li>
+</ul>
+<p style="margin-top: 1rem;">Дополнительно: робототехника, программирование, медиастудия.</p>
+</section>
 
-За годы работы школа стала кузницей настоящих профессионалов. Мы с гордостью можем сказать, что наши выпускники востребованы в самых разных сферах: среди них врачи и учителя, инженеры и деятели культуры, защитники Отечества и успешные руководители. Их достижения — это главная награда для педагогического коллектива и доказательство высокого качества образования, которое дает наша школа.
+<section id="news">
+<h2>Посты и новости</h2>
+<div id="newsList" class="news-list" aria-live="polite"></div>
+<div class="news-more"><button type="button" id="newsMore" class="cta secondary" hidden>Показать ещё</button></div>
+</section>
 
-Но, прежде всего, наша школа — это Дом счастливого детства. Здесь каждый ученик окружен заботой, вниманием и теплом. Мы создаем условия не только для получения глубоких знаний, но и для гармоничного развития личности, раскрытия талантов и воспитания истинных патриотов своей Родины.
-</p>
-  </section>
+<section id="events">
+<h2>Ближайшие мероприятия</h2>
+<ul>
+<li>Все мероприятия публикуются в мессенджере MAX.</li>
+<li><a target="_blank" rel="noopener noreferrer"
+href="https://max.ru/sferum_bot?startapp=eyJpbnZpdGVJZCI6ImJmY2FjNjhiLWVjZDItNDE4OS04ODVjLWVmZWQyNTU0ODk4YyJ9">Подробнее</a>
+</li>
+</ul>
+</section>
 
-  <section id="grades">
-    <h2>Классы и предметы</h2>
-    <p>У нас учатся с 1 по 11 класс. Основные направления:</p>
-    <ul>
-      <li>Естественно-научное (биология, химия, физика)</li>
-      <li>Гуманитарное (история, обществознание, литература)</li>
-      <li>Математическое (алгебра, геометрия, информатика)</li>
-      <li>Кружки: БАС, математический, литературный, шахматы, футбол, волейбол, баскетбол, легкая атлетика</li>
-    </ul>
-    <p style="margin-top: 1rem;">Дополнительно: робототехника, программирование, медиастудия.</p>
-  </section>
+<section id="contacts">
+<h2>Контакты</h2>
+<div class="contacts-grid">
+<div class="contacts-info">
+<div class="contacts-list">
+<p><strong>Адрес:</strong> ЧР, Курчалоевский район, с. Майртуп, ул. З. А. Кадырова, 17</p>
+<p><strong>Телефон администратора:</strong> <a href="tel:+79891734308">+7 (989) 173-43-08</a></p>
+<p><strong>Email администратора:</strong> <a href="mailto:schoolMayrtup2@gmail.com">schoolMayrtup2@gmail.com</a></p>
+<p><strong>Режим работы:</strong> пн–пт, 8:00–18:00</p>
+</div>
 
-  <section id="events">
-    <h2>Ближайшие мероприятия </h2>
-    <ul>
-      <li>Все мероприятия публикуется в месенежер MAX</li>
-      <li><a
-            href="https://max.ru/sferum_bot?startapp=eyJpbnZpdGVJZCI6ImJmY2FjNjhiLWVjZDItNDE4OS04ODVjLWVmZWQyNTU0ODk4YyJ9">Подробнее</a>
-      </li>
-    </ul>
-  </section>
+<!-- Социальные сети -->
+<div class="social-buttons">
+<a href="https://vk.ru/club222717490" target="_blank" rel="noopener noreferrer" class="btn-social btn-vk">📱 Мы ВКонтакте</a>
+<!-- Ссылку на Telegram добавьте сюда, когда будет настоящий адрес канала:
+<a href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener noreferrer" class="btn-social" style="background:#229ed9">✈️ Наш Telegram</a>
+-->
+</div>
+</div>
 
-  <section id="contacts">
-    <h2>Контакты</h2>
-    <div class="contacts-grid">
-      <div class="contacts-info">
-        <div class="contacts-list">
-          <p><strong>Адрес:</strong> Адрес ЧР, Курчалоевский район, с. Майртуп, ул. 3. А Кадырова, 17</p>
-          <p><strong>Телефон Администратора:</strong> <a href="tel:+79891734308">+7 (989) 173-43-08</a></p>
-          <p><strong>Email Администратора:</strong> <a href="mailto:schoolMayrtup2@gmail.com">schoolMayrtup2@gmail.com</a></p>
-          <p><strong>Режим работы:</strong> пн–пт, 8:00–18:00</p>
-        </div>
-        
-        <!-- Социальные сети -->
-        <div class="social-buttons">
-          <a href="https://vk.ru/club222717490" target="_blank" class="btn-social btn-vk">📱 Мы ВКонтакте</a>
-          <a href="https://t.me/club222717490" target="_blank" class="btn-social btn-tg">✈️ Наш Telegram</a>
-        </div>
-      </div>
-      
-      <!-- Интерактивная карта Яндекс -->
-      <div class="map-container">
-        <iframe src="https://maps.apple/p/AJVZue4heWafnr" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
-      </div>
-    </div>
-  </section>
+<!-- Карта Яндекс -->
+<div>
+<div class="map-container">
+<iframe title="https://yandex.ru/maps/?ll=46.140232%2C43.201453&mode=poi&poi%5Bpoint%5D=46.139846%2C43.201539&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D125137225370&z=18.77"></iframe>
+</div>
+<a class="map-link" target="_blank" rel="noopener noreferrer"
+href="https://yandex.ru/maps/?ll=46.140232%2C43.201453&mode=poi&poi%5Bpoint%5D=46.139846%2C43.201539&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D125137225370&z=18.77">Открыть карту в новой вкладке</a>
+</div>
+</div>
+</section>
 
-  <!-- Форма обратной связи -->
-  <section id="feedback">
-    <h2>Обратная связь</h2>
-    <p>Есть вопросы или предложения? Напишите нам, и администрация школы ответит вам в ближайшее время.</p>
-  
-    <div id="successAlert" class="success-message">Спасибо! Ваше сообщение успешно отправлено администратору.</div>
-     <form id="schoolForm" class="contact-form">
-      <div class="form-group">
-        <label for="name">Ваше имя *</label>
-        <input type="text" id="name" required placeholder="Иванов Иван">
-      </div>
-      <div class="form-group">
-        <label for="email">Электронная почта / Телефон *</label>
-        <input type="text" id="email" required placeholder="example@mail.ru или +7...">
-      </div>
-      <div class="form-group">
-        <label for="message">Текст сообщения *</label>
-        <textarea id="message" rows="4" required placeholder="Введите ваше обращение..."></textarea>
-      </div>
-      <button type="submit" class="cta" style="margin-top: 0.5rem;">Отправить сообщение</button>
-    </form>
-  </section>
+<!-- Форма обратной связи -->
+<section id="feedback">
+<h2>Обратная связь</h2>
+<p>Есть вопросы или предложения? Напишите нам, и администрация школы ответит вам в ближайшее время.</p>
+
+<div id="successAlert" class="success-message" role="status">Откроется ваша почтовая программа с готовым письмом. Нажмите «Отправить» в ней, чтобы сообщение дошло до администрации.</div>
+<form id="schoolForm" class="contact-form">
+<div class="form-group">
+<label for="name">Ваше имя *</label>
+<input type="text" id="name" name="name" required autocomplete="name" placeholder="Иванов Иван">
+</div>
+<div class="form-group">
+<label for="contact">Электронная почта или телефон для ответа *</label>
+<input type="text" id="contact" name="contact" required placeholder="example@mail.ru или +7...">
+</div>
+<div class="form-group">
+<label for="message">Текст сообщения *</label>
+<textarea id="message" name="message" rows="4" required placeholder="Введите ваше обращение..."></textarea>
+</div>
+<button type="submit" class="cta" style="margin-top: 0.5rem;">Отправить сообщение</button>
+</form>
+</section>
 </main>
 <footer>
-  &copy; 2026 МБОУ «Средняя школа №2». Все права защищены.
+&copy; 2026 МБОУ «Майртупская СШ №2 им. А. А. Кадырова». Все права защищены.
 </footer>
 
+<!-- Скрытая админ-панель: открывается по адресу index.html#admin или пятью быстрыми кликами по названию школы в шапке -->
+<div class="admin-overlay" id="adminOverlay" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+<div class="admin-box">
+<div class="admin-head">
+<h2 id="adminTitle">Панель администратора</h2>
+<button type="button" class="cta secondary small" id="adminClose">Закрыть</button>
+</div>
+
+<!-- Вход -->
+<div id="adminLogin">
+<div class="form-group">
+<label for="adminPass">Пароль</label>
+<input type="password" id="adminPass" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false">
+</div>
+<button type="button" class="cta small" id="adminEnter">Войти</button>
+<div class="admin-error" id="adminError"></div>
+</div>
+
+<!-- Рабочая область -->
+<div id="adminWork" hidden>
+<div class="admin-note">
+Изменения сохраняются только в этом браузере. Чтобы их увидели все посетители, нажмите «Скачать posts.json» и загрузите файл на хостинг рядом с index.html (с заменой старого).
+</div>
+
+<h3 id="formTitle">Новый пост</h3>
+<div class="form-group">
+<label for="pTitle">Заголовок *</label>
+<input type="text" id="pTitle" maxlength="150">
+</div>
+<div class="form-group">
+<label for="pDate">Дата *</label>
+<input type="date" id="pDate">
+</div>
+<div class="form-group">
+<label for="pText">Текст * (абзацы разделяйте пустой строкой)</label>
+<textarea id="pText" rows="6"></textarea>
+</div>
+<div class="form-group">
+<label for="pImage">Ссылка на картинку (необязательно)</label>
+<input type="url" id="pImage" placeholder="https://...">
+</div>
+<div class="admin-actions">
+<button type="button" class="cta small" id="pSave">Опубликовать</button>
+<button type="button" class="cta secondary small" id="pCancel" hidden>Отменить правку</button>
+</div>
+<div class="admin-error" id="pError"></div>
+
+<h3>Все посты</h3>
+<div id="adminPosts"></div>
+
+<h3>Данные</h3>
+<div class="admin-actions">
+<button type="button" class="cta small" id="exportBtn">Скачать posts.json</button>
+<label class="cta secondary small" style="margin-top:0">Загрузить posts.json<input type="file" id="importFile" accept="application/json,.json" hidden></label>
+<button type="button" class="cta danger small" id="resetBtn">Сбросить мои изменения</button>
+<button type="button" class="cta secondary small" id="logoutBtn">Выйти</button>
+</div>
+</div>
+</div>
+</div>
+
 <script>
-  // Скрипт для интерактивной отправки формы
-  document.getElementById('schoolForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Предотвращаем перезагрузку страницы
-    
-    // Скрываем форму и показываем уведомление об успехе
-    this.style.display = 'none';
-    document.getElementById('successAlert').style.display = 'block';
-  });
+(function () {
+'use strict';
+
+/* ---------- Меню на телефоне ---------- */
+var nav = document.getElementById('mainNav');
+var toggle = document.getElementById('menuToggle');
+toggle.addEventListener('click', function () {
+var open = nav.classList.toggle('open');
+toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+nav.addEventListener('click', function (e) {
+if (e.target.tagName === 'A') {
+nav.classList.remove('open');
+toggle.setAttribute('aria-expanded', 'false');
+}
+});
+
+/* ---------- Форма обратной связи (через почтовую программу) ---------- */
+var ADMIN_EMAIL = 'schoolMayrtup2@gmail.com';
+document.getElementById('schoolForm').addEventListener('submit', function (e) {
+e.preventDefault();
+var name = document.getElementById('name').value.trim();
+var contact = document.getElementById('contact').value.trim();
+var message = document.getElementById('message').value.trim();
+var body = 'Имя: ' + name + '\nКонтакт для ответа: ' + contact + '\n\n' + message;
+var url = 'mailto:' + ADMIN_EMAIL +
+'?subject=' + encodeURIComponent('Обращение с сайта школы') +
+'&body=' + encodeURIComponent(body);
+document.getElementById('successAlert').style.display = 'block';
+this.reset();
+window.location.href = url;
+});
+
+/* ---------- Посты и новости ---------- */
+var STORAGE_KEY = 'school_posts_v1';
+var PAGE_SIZE = 5;
+
+// Стартовые посты (показываются, пока нет posts.json и локальных правок)
+var DEFAULT_POSTS = [
+{
+id: 'welcome',
+title: 'Добро пожаловать на обновлённый сайт школы',
+date: '2026-09-01',
+text: 'Здесь будут появляться новости школы, объявления и итоги мероприятий.\n\nСледите за обновлениями и пишите нам через форму обратной связи.',
+image: ''
+}
+];
+
+var posts = [];
+var shown = PAGE_SIZE;
+var newsList = document.getElementById('newsList');
+var newsMore = document.getElementById('newsMore');
+
+function readLocal() {
+try {
+var raw = localStorage.getItem(STORAGE_KEY);
+if (!raw) return null;
+var data = JSON.parse(raw);
+return Array.isArray(data) ? data : null;
+} catch (err) { return null; }
+}
+function writeLocal() {
+try { localStorage.setItem(STORAGE_KEY, JSON.stringify(posts)); return true; }
+catch (err) { return false; }
+}
+function todayLocal() {
+var d = new Date();
+var m = ('0' + (d.getMonth() + 1)).slice(-2), day = ('0' + d.getDate()).slice(-2);
+return d.getFullYear() + '-' + m + '-' + day;
+}
+function cleanPost(p) {
+if (!p || typeof p !== 'object') return null;
+var title = String(p.title || '').trim();
+var text = String(p.text || '').trim();
+if (!title || !text) return null;
+var image = String(p.image || '').trim();
+if (image && !/^https?:\/\//i.test(image)) image = '';
+return {
+id: String(p.id || ('p' + Date.now() + Math.random().toString(16).slice(2, 6))),
+title: title,
+date: /^\d{4}-\d{2}-\d{2}$/.test(p.date) ? p.date : todayLocal(),
+text: text,
+image: image
+};
+}
+function cleanList(list) {
+return (Array.isArray(list) ? list : []).map(cleanPost).filter(Boolean);
+}
+function sortPosts() {
+posts.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+}
+function fmtDate(iso) {
+var d = new Date(iso + 'T00:00:00');
+return isNaN(d) ? iso : d.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function renderNews() {
+sortPosts();
+newsList.textContent = '';
+if (!posts.length) {
+var empty = document.createElement('p');
+empty.className = 'news-empty';
+empty.textContent = 'Пока здесь нет новостей.';
+newsList.appendChild(empty);
+newsMore.hidden = true;
+return;
+}
+posts.slice(0, shown).forEach(function (p) {
+var card = document.createElement('article');
+card.className = 'news-card';
+var h = document.createElement('h3'); h.textContent = p.title;
+var d = document.createElement('div'); d.className = 'news-date'; d.textContent = fmtDate(p.date);
+card.appendChild(h); card.appendChild(d);
+if (p.image) {
+var img = document.createElement('img');
+img.src = p.image; img.alt = p.title; img.loading = 'lazy';
+img.referrerPolicy = 'no-referrer';
+card.appendChild(img);
+}
+p.text.split(/\n\s*\n/).forEach(function (para) {
+if (!para.trim()) return;
+var el = document.createElement('p'); el.textContent = para.trim();
+card.appendChild(el);
+});
+newsList.appendChild(card);
+});
+newsMore.hidden = posts.length <= shown;
+}
+newsMore.addEventListener('click', function () { shown += PAGE_SIZE; renderNews(); });
+
+function loadPosts() {
+var local = readLocal();
+if (local) { posts = cleanList(local); renderNews(); return; }
+posts = cleanList(DEFAULT_POSTS);
+renderNews();
+// Общий файл с постами для всех посетителей (лежит рядом с index.html)
+if (/^https?:/.test(location.protocol)) {
+fetch('posts.json', { cache: 'no-cache' })
+.then(function (r) { if (!r.ok) throw new Error('no file'); return r.json(); })
+.then(function (data) {
+var list = cleanList(data);
+if (list.length) { posts = list; renderNews(); }
+})
+.catch(function () { /* файла нет — остаются стартовые посты */ });
+}
+}
+
+/* ---------- Админ-панель ---------- */
+// SHA-256 пароля администратора. Чтобы сменить пароль, подставьте сюда SHA-256 нового
+var PASS_HASH = 'e23eb1a052153dd5e16b46215f4f08d851b3edefa55641c335ce860a2aa1d6f5';
+
+var overlay = document.getElementById('adminOverlay');
+var loginBox = document.getElementById('adminLogin');
+var workBox = document.getElementById('adminWork');
+var adminError = document.getElementById('adminError');
+var passInput = document.getElementById('adminPass');
+var editingId = null;
+
+function sha256(str) {
+if (!window.crypto || !crypto.subtle) return Promise.reject(new Error('no crypto'));
+return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str)).then(function (buf) {
+return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+return ('0' + b.toString(16)).slice(-2);
+}).join('');
+});
+}
+
+function openAdmin() {
+overlay.classList.add('open');
+document.body.style.overflow = 'hidden';
+if (sessionStorage.getItem('school_admin') === '1') showWork();
+else { loginBox.hidden = false; workBox.hidden = true; passInput.value = ''; passInput.focus(); }
+}
+function closeAdmin() {
+overlay.classList.remove('open');
+document.body.style.overflow = '';
+if (location.hash === '#admin') history.replaceState(null, '', location.pathname + location.search);
+}
+function showWork() {
+loginBox.hidden = true; workBox.hidden = false;
+resetForm(); renderAdminPosts();
+}
+
+// Открытие: адрес #admin или 5 быстрых кликов по логотипу
+var clicks = 0, clickTimer = null;
+document.getElementById('logo').addEventListener('click', function () {
+clicks++;
+clearTimeout(clickTimer);
+clickTimer = setTimeout(function () { clicks = 0; }, 1500);
+if (clicks >= 5) { clicks = 0; openAdmin(); }
+});
+window.addEventListener('hashchange', function () { if (location.hash === '#admin') openAdmin(); });
+if (location.hash === '#admin') openAdmin();
+
+document.getElementById('adminClose').addEventListener('click', closeAdmin);
+overlay.addEventListener('click', function (e) { if (e.target === overlay) closeAdmin(); });
+document.addEventListener('keydown', function (e) {
+if (e.key === 'Escape' && overlay.classList.contains('open')) closeAdmin();
+});
+
+function tryLogin() {
+adminError.textContent = '';
+sha256(passInput.value.trim()).then(function (h) {
+if (h === PASS_HASH) { sessionStorage.setItem('school_admin', '1'); showWork(); }
+else adminError.textContent = 'Неверный пароль.';
+}).catch(function () {
+adminError.textContent = 'Вход работает только на защищённом соединении (https) или при открытии файла на компьютере.';
+});
+}
+document.getElementById('adminEnter').addEventListener('click', tryLogin);
+passInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') tryLogin(); });
+document.getElementById('logoutBtn').addEventListener('click', function () {
+sessionStorage.removeItem('school_admin'); closeAdmin();
+});
+
+var pTitle = document.getElementById('pTitle');
+var pDate = document.getElementById('pDate');
+var pText = document.getElementById('pText');
+var pImage = document.getElementById('pImage');
+var pError = document.getElementById('pError');
+var pCancel = document.getElementById('pCancel');
+var pSave = document.getElementById('pSave');
+var formTitle = document.getElementById('formTitle');
+
+function resetForm() {
+editingId = null;
+pTitle.value = ''; pText.value = ''; pImage.value = '';
+pDate.value = todayLocal();
+pError.textContent = '';
+pCancel.hidden = true;
+pSave.textContent = 'Опубликовать';
+formTitle.textContent = 'Новый пост';
+}
+pCancel.addEventListener('click', resetForm);
+
+pSave.addEventListener('click', function () {
+pError.textContent = '';
+var p = cleanPost({
+id: editingId, title: pTitle.value, date: pDate.value, text: pText.value, image: pImage.value
+});
+if (!p) { pError.textContent = 'Заполните заголовок и текст.'; return; }
+if (pImage.value.trim() && !p.image) { pError.textContent = 'Ссылка на картинку должна начинаться с http:// или https://'; return; }
+if (editingId) {
+posts = posts.map(function (x) { return x.id === editingId ? p : x; });
+} else {
+posts.push(p);
+}
+if (!writeLocal()) pError.textContent = 'Не удалось сохранить в браузере. Скачайте posts.json, чтобы не потерять изменения.';
+renderNews(); renderAdminPosts();
+if (!pError.textContent) resetForm();
+});
+
+function renderAdminPosts() {
+var box = document.getElementById('adminPosts');
+box.textContent = '';
+sortPosts();
+if (!posts.length) {
+var e = document.createElement('p'); e.textContent = 'Постов пока нет.'; box.appendChild(e); return;
+}
+posts.forEach(function (p) {
+var row = document.createElement('div'); row.className = 'admin-post';
+var info = document.createElement('span');
+info.textContent = p.title;
+var small = document.createElement('small'); small.textContent = fmtDate(p.date);
+info.appendChild(small);
+var acts = document.createElement('div'); acts.className = 'admin-actions';
+var edit = document.createElement('button');
+edit.type = 'button'; edit.className = 'cta secondary small'; edit.textContent = 'Править';
+edit.addEventListener('click', function () {
+editingId = p.id;
+pTitle.value = p.title; pDate.value = p.date; pText.value = p.text; pImage.value = p.image || '';
+pCancel.hidden = false; pSave.textContent = 'Сохранить изменения';
+formTitle.textContent = 'Правка поста';
+pTitle.focus();
+});
+var del = document.createElement('button');
+del.type = 'button'; del.className = 'cta danger small'; del.textContent = 'Удалить';
+del.addEventListener('click', function () {
+if (!confirm('Удалить пост «' + p.title + '»?')) return;
+posts = posts.filter(function (x) { return x.id !== p.id; });
+writeLocal(); renderNews(); renderAdminPosts();
+if (editingId === p.id) resetForm();
+});
+acts.appendChild(edit); acts.appendChild(del);
+row.appendChild(info); row.appendChild(acts);
+box.appendChild(row);
+});
+}
+
+document.getElementById('exportBtn').addEventListener('click', function () {
+sortPosts();
+var blob = new Blob([JSON.stringify(posts, null, 2)], { type: 'application/json' });
+var a = document.createElement('a');
+a.href = URL.createObjectURL(blob);
+a.download = 'posts.json';
+document.body.appendChild(a); a.click(); a.remove();
+setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+});
+
+document.getElementById('importFile').addEventListener('change', function (e) {
+var file = e.target.files[0];
+if (!file) return;
+var reader = new FileReader();
+reader.onload = function () {
+try {
+var list = cleanList(JSON.parse(reader.result));
+if (!list.length) throw new Error('empty');
+posts = list; writeLocal(); renderNews(); renderAdminPosts(); resetForm();
+} catch (err) { alert('Не удалось прочитать файл. Нужен posts.json, скачанный из этой панели.'); }
+};
+reader.readAsText(file);
+e.target.value = '';
+});
+
+document.getElementById('resetBtn').addEventListener('click', function () {
+if (!confirm('Убрать все изменения в этом браузере и вернуть посты с сайта?')) return;
+try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
+loadPosts(); resetForm();
+setTimeout(renderAdminPosts, 400);
+});
+
+loadPosts();
+})();
 </script>
 </body>
 </html>
